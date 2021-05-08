@@ -26,4 +26,15 @@ class ProductsController extends Controller
             'products' => $products
         ]);
     }
+
+    public function show($id) {
+        $data = [
+            "pear" => "Pêra",
+            "apple" => "Maçã",
+            "straw" => "Morango"
+        ];
+        return view('products.index', [
+            'products' => $data[$id] ?? "Produto $id não existe"
+        ]);
+    }
 }
