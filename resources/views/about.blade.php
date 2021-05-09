@@ -1,19 +1,39 @@
-@if (5 < 10)
-    <p>5 é menor que 10</p>
-@elseif (5 == 10)
-    <p>5 é menor que 10</p>
-@else 
-    <p>Todas as condições estão erradas</p>
-@endif
+{{--@switch($name)
+    @case('Nelson')
+        <h2>O nome é Nelson</h2>
+        @break
+    @case("Ana")
+        <h2>O nome é Ana</h2>
+        @break
+    @case("Mariana")
+        <h2>O nome é Mariana</h2>
+        @break
+    @default
+        <h2>Não existe nomes definidos</h2>
+@endswitch
 
-@unless (empty($name))
-    <h2>O nome não está vazio</h2>
-@endunless
 
-@empty($name)
-    <h2>O nome está vazio</h2>
-@endempty
+@for ($i = 0; $i < 10; $i++)
+    <p>O número é {{$i}}</p>
+@endfor
 
-@isset($name)
-    <h2>Nome foi definido</h2>
-@endisset
+--}}
+@foreach ($names as $name)
+    <p>O nome é {{$name}}</p>
+@endforeach
+<hr>
+@forelse ($names as $name)
+    <p>O nome é {{$name}}</p>    
+@empty
+    <p>Não existe nomes</p>
+@endforelse
+
+@php
+    $i = 0
+@endphp
+@while ($i < 10)
+    <p>{{$i}}</p>
+    @php
+        $i++;
+    @endphp
+@endwhile
