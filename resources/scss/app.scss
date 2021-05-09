@@ -1,0 +1,9 @@
+$primary-color: #bbb222;
+$secondary-color: #444bbb;
+body {
+    background-color: $primary-color;
+}
+
+nav a.active {
+    color: $secondary-color;
+}

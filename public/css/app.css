@@ -1,0 +1,7 @@
+body {
+  background-color: #76ee80;
+}
+
+nav a.active {
+  color: #444bbb;
+}

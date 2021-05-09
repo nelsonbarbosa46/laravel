@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página Inicial</title>
 
-    <style>
-        nav a.active {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
 </head>
 <body>
